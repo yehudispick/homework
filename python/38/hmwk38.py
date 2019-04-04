@@ -6,7 +6,7 @@ for number in range(1,11):
 random_number = random.randint(1,101)
 while True:
     try:
-        guess = int(input('Guess the number: '))
+        guess = int(input('Guess the number between 1-100: '))
         if guess == random_number:
             print(f'You Won! the number was {guess}')
             break
