@@ -1,16 +1,21 @@
-name_month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August','Septemper', 'October', 'November', 'December']
-amt_days_of_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ]
+def list():
+    name_month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August','Septemper', 'October', 'November', 'December']
+    amt_days_of_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ]
+    for month,amt_days in zip(name_month, amt_days_of_month):
+        print(month, amt_days)
 
-for month,amt_days in zip(name_month, amt_days_of_month):
-    print(month, amt_days)
+list()
 
-name_month = 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August','Septemper', 'October', 'November', 'December'
-amt_days_of_month = 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 
+def tuple():
+    name_month = 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August','Septemper', 'October', 'November', 'December'
+    amt_days_of_month = 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 
+    for month,amt_days in zip(name_month, amt_days_of_month):
+        print(month, amt_days)
+    
+tuple()
 
-for month,amt_days in zip(name_month, amt_days_of_month):
-    print(month, amt_days)
-
-months ={
+def dictionary():
+    months ={
     'January': 31,
     'February': 28,
     'March': 31,
@@ -23,41 +28,34 @@ months ={
     'October': 31,
     'November': 30,
     'December': 31
-}
-
-for x in months:
-    print(x, months[x])
+    }
+    for x in months:
+        print(x, months[x])
+    
+dictionary()
 
 def get_days_month(month):
-    if month =='January':
-        m = 31
-    elif month=='March':
-        m = 31
-    elif month =='May':
-        m = 31
-    elif month=='July':
-        m = 31
-    elif month=='August':
-        m = 31
-    elif month=='October':
-        m = 31
-    elif month=='December':
-        m = 31
-    elif month == 'April':
-        m = 30
-    elif month =='June':
-        m = 30
-    elif month=='September':
-        m = 30
-    elif month=='November':
-        m = 30
-    elif month =='February':
-        m = 28
-    else:
-        m = 'Invalid Month'
-    return m
+    months ={
+    'January': 31,
+    'February': 28,
+    'March': 31,
+    'April': 30,
+    'May': 31,
+    'June': 30,
+    'July': 31,
+    'August': 31,
+    'Septemper': 30,
+    'October': 31,
+    'November': 30,
+    'December': 31
+    }
+    for x in months:
+        if x.upper() == month.upper():
+            print (months[x])
+    
 
-print(get_days_month('June'))
+get_days_month('february')
+get_days_month('June')
 
 
 class Account:
