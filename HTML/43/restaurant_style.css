@@ -1,0 +1,77 @@
+html{
+    background-color:lightcyan;
+    
+}
+body{
+   width: 75%;
+   margin: auto;
+   background-color:gainsboro;
+   padding: 2em;
+   padding-top: 1em;
+   text-align: center;
+   color: grey;
+   
+}
+header{
+    text-align: center;
+    
+   
+}
+header h1
+{
+   border: 6px dashed lightcyan; 
+   border-radius: 5em;
+   padding: .25em;
+   color: lightsalmon;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 72px;
+    text-shadow: 4px 4px 3px lightcyan;
+    text-transform: initial;
+    transform: skew(20deg, 2deg)
+}
+    header a{
+        text-decoration: none;
+    }
+    header a:hover{
+        text-decoration: underline;
+            }
+    header a:link{
+        color: gray;
+        }
+    header a:visited{
+        color: mediumaquamarine;
+    }
+    
+h1{
+    color: lightcyan;
+   
+    text-shadow: 3px 3px 4px lightsalmon;
+}
+
+h2, h3{
+    color: lightsalmon;
+}
+h4{
+    color: grey;
+    
+}
+h6{ 
+    color: grey;
+    font-size: 14px;
+}
+p{line-height: 20px;
+  letter-spacing: 1px}
+body a{
+    text-decoration: none;
+}
+body a:hover{
+    text-decoration: underline;
+        }
+ 
+body a:link{
+    color: gray;
+    }
+body a:visited{
+    color: mediumaquamarine;
+}
