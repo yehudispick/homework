@@ -1,0 +1,73 @@
+html{
+    background-color:lightcyan;
+    
+}
+body{
+   width: 75%;
+   margin: auto;
+   background-color:gainsboro;
+   padding: 2em;
+   padding-top: 1em;
+   text-align: center;
+   color: grey;
+   
+}
+header{
+    text-align: center;
+    
+   
+}
+#store_name
+{
+   border: 6px dashed lightcyan; 
+   border-radius: 5em;
+   padding: .25em;
+   color: lightsalmon;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 72px;
+    text-shadow: 4px 4px 3px lightcyan;
+    text-transform: initial;
+    transform: skew(20deg, 2deg)
+}
+    .link{
+        text-decoration: none;
+    }
+    .link:hover{
+        text-decoration: underline;
+            }
+    .link:link{
+        color: gray;
+        }
+    .link:visited{
+        color: #76E9BD;
+    }
+    
+.page_name{
+    color: lightcyan;
+   
+    text-shadow: 3px 3px 4px lightsalmon;
+}
+
+h2, h3{
+    color: lightsalmon;
+}
+.menu_item{
+    color: grey;
+    
+}
+#description{ 
+    color:(168,169,186);
+    font-size: 14px;
+}
+p{line-height: 20px;
+  letter-spacing: 1px}
+
+
+#add {
+    list-style: upper-alpha;
+   
+}
+
+
+    
