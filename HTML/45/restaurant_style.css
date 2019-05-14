@@ -1,0 +1,98 @@
+html{
+    background-color:lightcyan;
+    
+}
+body{
+   width: 75%;
+   margin: auto;
+   background-color:gainsboro;
+   padding: 2em;
+   padding-top: 1em;
+   text-align: center;
+   color: grey;
+   
+}
+header{
+    text-align: center;
+   
+}
+#store_name
+{
+    margin: 0;  
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    }
+nav li{
+    display: inline;
+}
+    .link{
+        text-decoration: none;
+    }
+    .link:hover{
+        text-decoration: underline;
+        font-size: 18px;
+            }
+    .link:link{
+        color: gray;
+        }
+    .link:visited{
+        color: #4ec986;
+    }
+    
+.page_name{
+    color: lightcyan;
+   
+    text-shadow: 3px 3px 4px lightsalmon;
+}
+
+h2, h3{
+    color: lightsalmon;
+}
+.menu_item{
+    color: grey;
+    
+}
+#description{ 
+    color:(168,169,186);
+    font-size: 14px;
+    margin: 0;
+}
+p{line-height: 20px;
+  letter-spacing: 1px}
+
+
+#add {
+    text-align: center;
+    list-style-image: url(images/Fork.png);
+    list-style-position: inside;
+}
+
+#video{
+    background: linear-gradient(90deg, rgba(238,120,51,1) 0%, rgba(201,210,35,1) 22%, rgba(35,147,29,1) 41%, rgba(48,185,190,1) 63%, rgba(224,109,48,1) 89%);
+    width: 360px;
+    padding: 6px;
+    margin: 6px;
+    height: 360px;
+    float: left;
+    vertical-align: top;
+    box-sizing: border-box;
+    
+}
+#paragraph{
+    text-align: justify;
+    margin-right: 6px;
+    margin-left: 380px;
+    margin-top: 150px;
+}
+#about_us{
+    border: 1px solid white;
+    height: 380px;
+    
+}
+
+
+
+
+    
