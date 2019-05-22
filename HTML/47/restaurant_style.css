@@ -1,0 +1,264 @@
+ *{
+     line-height: 1em;
+ }
+html{
+    background-color:lightcyan;
+    scroll-behavior: smooth;
+    
+}
+body{
+   width: 75%;
+   margin: auto;
+   background-color:gainsboro;
+   padding: 2em;
+   padding-top: 1em;
+   text-align: center;
+   color: grey;
+   
+   
+}
+header{
+    text-align: center;
+   
+}
+#store_name
+{
+    
+    text-align: center;
+    margin: auto;  
+}
+#logo{
+    height:350px;
+    width:450px;
+}
+#pic{
+    
+     max-width:100%;
+     max-height:100%;
+     border-radius: 100%;
+     position: relative;
+     
+}
+.image{
+    position: relative;
+}
+#words{
+    position: absolute;
+    bottom: 0;
+    left: 75%;
+    font-family: copperplate, fantasy;
+    color:#38883cdc;
+    
+}
+nav{
+   display: inline;
+}
+
+nav ul{
+    list-style: none;
+    
+
+    }
+nav li{
+    display: inline;
+}
+    .link{
+        text-decoration: none;
+        height: 2em;
+    }
+    .link:hover{
+        text-decoration: underline;
+        font-size: 18px;
+            }
+    .link:link{
+        color: gray;
+        }
+    .link:visited{
+        color: #4ec986;
+    }
+    
+.page_name{
+    color: lightcyan;
+    text-shadow: 3px 3px 4px lightsalmon;
+    font-size: 4em;
+    margin: 0;
+    padding: .25em  ;
+    border: 10px  rgba(255, 160, 131, 0.24) double;
+    border-radius: 50px;
+    background-color: gainsboro;  
+}
+
+
+h2, h3, #caption{
+    font-family: papyrus,serif;
+    font-weight: bolder;
+    color: lightsalmon;
+    padding: .75em;
+    font-size:1.5em;
+}
+.menu_item{
+    font-family: papyrus,serif;
+    color: grey;
+    
+}
+#description{ 
+    color:(168,169,186);
+    font-size: 14px;
+    margin: 0;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+p{
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
+
+.itemdescrpition{
+    font-family: 'Indie Flower', cursive;
+}
+#add {
+    text-align: center;
+    list-style-image: url(images/Fork.png);
+    list-style-position: inside;
+}
+ 
+#video{
+    background: linear-gradient(90deg, rgba(238,120,51,1) 0%, rgba(201,210,35,1) 22%, rgba(35,147,29,1) 41%, rgba(48,185,190,1) 63%, rgba(224,109,48,1) 89%);
+    width: 360px;
+    padding: 6px;
+    margin: 6px;
+    height: 360px;
+    float: left;
+    vertical-align: top;
+    box-sizing: border-box;
+    
+}
+#paragraph{
+    text-align: justify;
+    margin-right: 6px;
+    margin-left: 380px;
+    margin-top: 5%;
+    
+}
+#about_us{
+    margin-top:3em;
+    border: 1px solid white;
+    height: 380px;
+    
+}
+#totop{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+            height: 4.5em;
+            width: 4em;
+            padding-top: 3px;
+            border: 1px solid black;
+            background-color: rgba(207, 205, 205, 0.815);
+            text-align: center;
+            margin: auto;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+
+}
+@media screen and (max-width: 95%){
+    #words{
+        left: 65%
+    }
+}
+@media screen and (max-width: 85%){
+    #words{
+        left:6em;
+    }
+}
+@media screen and (max-width: 75%){
+    #words{
+        left: 50%
+    }
+}
+@media screen and (max-width: 799px)
+{
+   #video, video{
+        display: none;
+    }
+    #paragraph{
+        margin-left: 0;
+        margin-top: 15%;
+        padding:1em;
+    }
+    #logo{
+        height:200px;
+        width:300px;
+    }
+    #pic{
+        max-width: 350px;
+        max-height: 200px;
+     }
+    #words{
+        left:55%;
+        font-size: 18px;
+    }
+    .menu_img{
+       
+       max-width: 350px;
+    }
+    #totop{
+        height: 5.5em;
+        width: 4em;
+        bottom: 0;
+        right: 0;  
+        padding-top: 0;
+        font-weight: bold;
+        font-size: 1em;
+    }
+    
+
+   
+}
+table{
+    margin-top:2em ;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+td,th{
+    border: 2px dashed gray;
+    padding: .75em;
+
+}
+#paragraph:first-letter{
+    font-size: 500%;
+    color: rgba(107, 121, 136, 0.678) ;
+    font-family: "brush script mt", copperplate ;
+}
+tbody tr:last-child{
+    color: lightsalmon;
+}
+th{
+    background-color:rgb(147, 141, 151);
+    color:white; 
+}
+tbody tr:nth-child(even){
+    background-color: cornsilk;
+}
+    tbody tr:nth-child(odd){
+    background-color:whitesmoke;
+}
+tbody tr:hover{
+    background-color: lightgrey;
+}
+nav{
+    position: absolute;
+    left:0;
+    right:0;
+   
+    }
+.nav{
+    position: relative;
+    padding-bottom:2em;
+}
+
+   
+
+   
