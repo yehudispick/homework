@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            width: 80%;
+            margin:auto;
+        }
+        textarea,input:not([type="submit"]):not([type=radio]):not([type=checkbox]){           display: block;
+            width: 100%;
+            margin-bottom: .5em;
+        }
+        option:nth-child(even){
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="processForm.php" method="POST">
+       <!-- <label> First Name:<input name="firstname" value ="Donald"placeholder="Enter your first name here"></label>-->
+        <label  for="firstname" ></label>First Name:<input name="firstname" id ="firstname" value ="Donald"placeholder="Enter your first name here" required minlength="3" maxlength="10">
+        <label  for="lastname"></label>Last Name:<input name="lastname" id="lastname"  placeholder="Enter your last name here" >
+       <label for="password"></label> Password: <input type="password" name="password" id="password" placeholder="Enter your password here">
+       <label for="age"></label> Age:<input type="number" name="age" placeholder="Your Age" min="0" max="120" step=".01">
+       <label for="email"></label> Email:<input type="email" name="email" placeholder="Enter your email here">
+       <label for="color"></label> Color:<input type="color" name="color" placeholder="Enter your favorite color here" value="#ABCDEF">
+       <label for="Birthday"></label> Date:<input type="date" name="Birthday" placeholder="Enter your birthday here">
+       <label for="week"></label> Favorite Week:<input type="week" name="week" placeholder="Enter your week here"> 
+       <label for="month"></label> Favorite Month:<input type="month" name="month" placeholder="Enter your month here">
+       <label for="phone"></label> Telephone:<input type="tel" name="phone" placeholder="Enter your telephone here">
+       <label for="rating"></label> Rating:<input type="range" name="rating" min="1" max="5">
+       <label for="comments"></label> Comments:
+       <textarea placeholder="please write a comment here"> Default text</textarea>
+       <label   for="poll"> Do you think they will impeach trump?</label>
+       <input type="radio" name="poll" value="yes" checked> yes
+       <input type="radio" name="poll" value="no"> no
+       <input type="radio" name="poll" value="maybe"> maybe
+       <br>
+       <label   for="sides"> Which sides do you want?</label>
+       <input type="checkbox" name="side" value="fries"> Fries
+       <input type="checkbox" name="side" value="onion rings" checked> Onion rings
+       <input type="checkbox" name="side" value="mashed potatoes"> mashed potatoes
+       <br>
+       <label for="drink" > Choose a drink</label>
+       <select name="drink" id="drink">
+           <option value="1">Pepsi</option>
+           <option value="2" selected>Coke</option>
+           <option value="3">Water</option>
+       </select>
+       <input type="submit">
+       <input type ="submit" value="registar">
+       <input type="reset">
+       <button><img src="../47/images/Fork.png"</button>
+    </form>
+</body>
+</html>
