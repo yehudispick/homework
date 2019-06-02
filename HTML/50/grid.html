@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    
+    body{
+        display: grid;
+        grid-template-columns: 150px;
+        grid-template-rows: repeat(7,150px);
+        grid-gap: 1em;
+        justify-content: center;
+       
+    }
+    div{
+        
+        background-color: chocolate;
+       
+    }
+    @media screen and (min-width: 750px){
+        body{
+        display: grid;
+        grid-template-columns: 150px 150px;
+        grid-template-rows: repeat(4, 150px);
+        grid-gap: 1em;
+        justify-content: center;
+       
+    }
+    div{
+        background-color:teal;
+       
+    }
+    div:first-child{
+        grid-column: 1/span 2;
+    }
+    }
+    @media screen and (min-width: 1200px){
+        body{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 200px 200px;
+        grid-template-areas:" one one two three"
+                            " four five six seven "
+        ; 
+        grid-gap: 1em;
+        justify-content: center;
+       
+    }
+    div{
+        
+        background-color:crimson;
+       
+    }
+    
+
+    div:first-child{
+        
+        grid-area: one;
+        grid-column: 1/span 2;
+    }
+    div:nth-child(2){
+        grid-area: two;       
+    }
+    div:nth-child(3){
+        grid-area: three;       
+    }
+    div:nth-child(4){
+        grid-area: four;       
+    }
+    div:nth-child(5){
+        grid-area: five;       
+    }
+    div:nth-child(6){
+        grid-area: six;       
+    }
+    div:nth-child(7){
+        grid-area: seven;       
+    }
+    
+    /*div:nth-child(1) {
+                grid-column-start: 1/3;
+                grid-row-start: 1;
+            }
+            div:nth-child(2) {
+                grid-column-start: 3;
+                grid-row-start: 1;
+            }
+            div:nth-child(3) {
+                grid-column-start: 4;
+                grid-row-start: 1;
+            }
+            div:nth-child(4) {
+                grid-column-start: 1;
+                grid-row-start: 2;
+            }
+            div:nth-child(5) {
+                grid-column-start: 2;
+                grid-row-start: 2;
+            }
+            div:nth-child(6) {
+                grid-column-start: 3;
+                grid-row-start: 2;
+            }
+            div:nth-child(7) {
+                grid-column-start: 4;
+                grid-row-start: 2;
+            }*/
+    }
+
+</style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>
