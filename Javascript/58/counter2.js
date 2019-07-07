@@ -5,6 +5,7 @@ window.app.counter2 = (function (theModule){
         
         
         theModule.createCounter=()=>{
+            theModule.numInstances = (theModule.numInstances || 0) + 1;
             let counter =0;
             
             return{
