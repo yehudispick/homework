@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id='message'>
+    <button id="show">show</button>
+    <hr>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, autem. Velit, tempora perferendis. Distinctio, rem nostrum quibusdam molestiae eligendi culpa, nisi repellat quam aliquam enim deleniti. Quod ducimus maiores commodi, quis, alias cumque sit fugiat aliquam quas facere pariatur quibusdam eum excepturi exercitationem minima aperiam facilis, eos placeat aspernatur delectus assumenda dolore vero molestiae ipsam? Accusantium nam deleniti ipsum ab iste deserunt labore neque inventore aliquid sint possimus explicabo, ipsa ratione nostrum aliquam esse corrupti. Possimus aperiam adipisci incidunt fugiat. Expedita repellendus blanditiis et laboriosam magni! Porro sapiente debitis repellat dolore praesentium illo, aliquid explicabo consectetur nisi obcaecati laborum possimus!
+   <script src="messageBox.js"></script>
+   <script>
+        pcs.messageBox.show('Is this enough homework?',['Yes', 'No', 'Maybe'],usersChoice => {console.log('You picked ' + usersChoice)});
+        const messageInput =document.getElementById('message');
+        document.getElementById('show').addEventListener('click', ()=>{
+            pcs.messageBox.show( messageInput.value);
+        })
+
+    </script>
+
+</body>
+</html>
