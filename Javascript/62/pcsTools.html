@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="donald">Donald Trump</h1>
+    <h1 id="bernie">Bernie Sanders</h1>
+    <script src="pcsTools2.js"></script>
+    <script>
+       /* const donald=pcs.tools.get('donald');
+        pcs.tools.setCss(donald,'color','green');
+
+        const bernie=pcs.tools.get('bernie');
+        pcs.tools.setCss(bernie,'color','red')*/
+
+        const donald=pcs('donald')
+            .css('color','green')
+            .click(event=>console.log('The Donald was clicked',event))
+            .colorChanger(2000,500);
+        //donald.setCss('color','green');
+        //console.log(donald.getCss('color'));
+       // donald.css('color','green');
+        console.log(donald.css('color'));
+        donald.data('age',73)
+        console.log(donald.data('age'));
+
+        
+        
+        const bernie=pcs('bernie');
+        //bernie.setCss('color','red');
+        //console.log(bernie.getCss('color'));
+        bernie.css('color','red');
+        console.log(bernie.css('color'));
+        bernie.hide();
+
+        setTimeout(()=>bernie.show(),2000);
+        bernie.colorChanger(7000);
+        bernie.data('age',77)
+        console.log(bernie.data('age'));
+        //setTimeout(bernie.show,2000);
+    </script>
+</body>
+</html>
