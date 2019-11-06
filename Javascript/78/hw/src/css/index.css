@@ -1,0 +1,13 @@
+body{
+    text-align: center;  
+}
+#button, #result{
+    margin-top: 2em;
+}
+#button{
+    font-size: 2em;
+    color: white;
+    background-color: black;
+    border-radius: .5em;
+    padding: 2em;
+}
