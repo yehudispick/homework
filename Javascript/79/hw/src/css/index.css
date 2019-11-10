@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+    color: brown;
+    font-size: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#changeColor{
+    padding: 1em;
+}
+
