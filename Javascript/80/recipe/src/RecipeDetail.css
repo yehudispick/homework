@@ -1,0 +1,9 @@
+.recipe{
+    text-align: center;
+    color: royalblue;
+}
+ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+}
