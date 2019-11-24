@@ -72,7 +72,6 @@ function displayUserPost(user){
         if(currentPageNumber > 1){
             currentPageNumber -= 1;
             loadPost();
-            $('#comments').empty();
         }
     });
     
@@ -90,34 +89,34 @@ function loadPost() {
     const i = Pages.slice(begin, end)
     page.text("Page: " + currentPageNumber);        
     i.forEach(post=>{
-        $( `<div id = "post" class="list-group-item list-group-item-action"> 
+        const singlePost = $( `<div id = "post" class="list-group-item list-group-item-action"> 
                 <h2 class="mb-1">${post.Title}</h2>
                 <p class="mb-1">${post.Body}</p>
                 <button id="ShowHideComments"  class="btn btn-primary btn-sm text-right"> Show comments</button>
                 <div id="comments"  class="list-group"></div
             </div>`).appendTo(Posts)
-        .click(()=>{
-            //when click on the post it gets the right comments but appends the comments to the first post on that page 
-            //the id selectors are not working
-
-            let button = $('.post').find('button');
-            if(button.text() == 'Hide Comments'){
-                button.text('Show Comments');
-            } 
-            else{
-                button.text('Hide Comments');
-            }
-            const comments = $('#comments');
-            if (!openComments) {       
-                openComments = true;
-                ShowComments(post,comments);                                          
-                comments.css('display','block');
-            }
-            else {
-                comments.css('display','none');
-                openComments =false;
-            }
-        })
+            
+            const button = $(singlePost).find('#ShowHideComments');
+            const comments = $(singlePost).find('#comments');
+            button.click(()=>{
+                
+                if(button.text() == 'Hide Comments'){
+                    button.text('Show Comments');
+                } 
+                else{
+                    button.text('Hide Comments');
+                }
+                if (!openComments) {       
+                    openComments = true;
+                    ShowComments(post,comments);                                          
+                    comments.css('display','block');
+                }
+                else {
+                    comments.css('display','none');
+                    openComments =false;
+                }
+            })
+        
     })
 }
 function getNumberOfPages() {
@@ -135,7 +134,6 @@ function ShowComments(post,commentdiv){
     .then(comments => {
         commentdiv.empty();
         comments.forEach(comment => {
-            console.log(comment);
                 const com =$(`<div class="list-group-item list-group-item-action " > 
                    <h5 class="mb-1">${comment.name}  </h5>
                    <p class="mb-1"> ${comment.body}</p>
