@@ -9,7 +9,6 @@ const previous = $('#previous');
 const next = $('#next');
 const page =$('#page');
 const control =$('.control');
-let openComments;
 const PostPerPage=3;
 let currentPageNumber = 1;
 let Pages =[];
@@ -98,22 +97,18 @@ function loadPost() {
             
             const button = $(singlePost).find('#ShowHideComments');
             const comments = $(singlePost).find('#comments');
-            button.click(()=>{
-                
-                if(button.text() == 'Hide Comments'){
-                    button.text('Show Comments');
-                } 
-                else{
-                    button.text('Hide Comments');
-                }
-                if (!openComments) {       
+            let openComments;
+            button.click(()=>{   
+                if (!openComments) {    
                     openComments = true;
                     ShowComments(post,comments);                                          
-                    comments.css('display','block');
+                    comments.css('display','block');  
+                    button.text('Hide Comments');
                 }
                 else {
-                    comments.css('display','none');
                     openComments =false;
+                    comments.css('display','none');
+                    button.text('Show Comments');
                 }
             })
         
