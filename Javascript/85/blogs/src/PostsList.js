@@ -18,7 +18,8 @@ export default class Posts extends Component{
             this.setState({
               posts: posts
             })
-          });
+          })
+          .catch(err => console.error(err));
     }    
     componentDidMount(){
       this.fetchPost();

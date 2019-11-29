@@ -9,20 +9,21 @@ export default class App extends Component {
     users: []
   }
   componentDidMount(){
-  fetch('https://jsonplaceholder.typicode.com/users')
-  .then(response => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        throw new Error('Something went wrong ...Failed to fetch the blog');
-      }
-    })
-    .then(users => {
-      console.log(users)
-      this.setState({
-        users: users
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Something went wrong ...Failed to fetch the blog');
+        }
       })
-    })
+      .then(users => {
+        console.log(users)
+        this.setState({
+          users: users
+        })
+      })
+      .catch(err => console.error(err));
   }
   handleSelectedBlog=(user)=>{
     this.setState({
@@ -35,7 +36,6 @@ export default class App extends Component {
     })  
   }
  
-    
   render(){
     const blogPost= this.state.selectedBlog?
       <PostsList  userId={this.state.selectedBlog}/>:
