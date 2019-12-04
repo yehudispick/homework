@@ -1,0 +1,24 @@
+.blog .website {
+    font-weight: bold;
+    padding: .5em;
+}
+
+.blog .company {
+    font-size: x-small;
+    padding: .5em;
+}
+
+.blog .title,
+.post .title {
+    font-style: italic;
+    padding: .5em;
+}
+.loading{
+    text-align: center;
+    font-style: italic;
+}
+ 
+.error{
+    text-align: center;
+    color: red;
+}
