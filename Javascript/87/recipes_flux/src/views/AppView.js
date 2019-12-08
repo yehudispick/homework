@@ -1,7 +1,9 @@
 import React from 'react';
+import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import './AppView.css';
 import Header from './Header';
 import RecipeList from './RecipeList';
+import AddRecipe from './AddRecipe';
 import RecipeDetails from './RecipeDetails';
 import Footer from './Footer';
 
@@ -12,16 +14,19 @@ export default(props)=> {
  // ) : (
  //   <h3>Please choose one of our delicious recipes</h3>
  // );
+ 
   return (
-    <div>
+    
+      <BrowserRouter>
       <Header/>
       <RecipeList {...props}/>
       <hr/>
-               
-
-      <Footer/>
       
-    </div>
+      <Route path="/add" component={AddRecipe}/>         
+      
+      <Footer/>
+      </BrowserRouter>
+    
   );
 }
 

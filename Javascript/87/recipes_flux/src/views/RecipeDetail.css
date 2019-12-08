@@ -1,0 +1,13 @@
+.recipe{
+    padding-left: 2em;
+ 
+}
+ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+}
+.buttondiv{
+    padding-left: 2em;
+    margin-bottom: 1em;
+}
