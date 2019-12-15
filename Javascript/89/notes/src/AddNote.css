@@ -1,0 +1,8 @@
+.add-note label{
+    display: block;
+    width: 100%;
+}
+.add-note input, .add-note textarea{
+    width: 100%;
+
+}
