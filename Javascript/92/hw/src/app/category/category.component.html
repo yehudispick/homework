@@ -1,0 +1,8 @@
+
+
+<ul *ngIf="items?.length">
+    <li *ngFor="let item of items">
+        <app-item [item]="item"></app-item>
+    </li>
+</ul>
+<h3 *ngIf="!items?.length">No Items to show</h3>

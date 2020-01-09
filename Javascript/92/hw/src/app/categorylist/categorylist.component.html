@@ -1,0 +1,13 @@
+<h2>Choose a category</h2>
+<div>
+    <select  [(ngModel)]="selectedCategory">
+        <option  *ngFor="let category of categories; let i = index;" [value]="i">
+            {{category.name}}           
+        </option>
+    </select>
+    
+</div>
+<hr/>
+
+    <app-category [items]="categories[selectedCategory].items"></app-category>
+
