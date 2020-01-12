@@ -1,0 +1,7 @@
+<div *ngIf="weather | async as wet" >
+
+    <h1>The Weather in {{wet.location}}:</h1> 
+    <img src="{{wet.icon}} " alt="{{wet.description}}">
+    
+    <h2>{{wet.description}}</h2>
+</div>

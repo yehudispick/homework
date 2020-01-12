@@ -1,0 +1,7 @@
+<h2>Weather</h2>
+<input #zipInput />
+<button (click)="setZip(zipInput.value)">Search</button>
+{{thezip}}
+<div *ngIf="theZip">
+  <app-weather [zip]="theZip"></app-weather>
+</div>
