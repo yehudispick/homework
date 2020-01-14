@@ -1,0 +1,10 @@
+<div *ngIf="posts | async as posts">
+    <ul>
+        <li *ngFor="let post of posts | slice:postIndex:postIndex + NUM_POSTS; let i = index">
+            <h2>{{post.title}}</h2>
+            <p>{{post.body}}</p>           
+        </li>
+        <button [disabled]="postIndex === 0" (click)="handlePrevious()">prev</button>
+        <button [disabled]="postIndex > posts.length - NUM_POSTS" (click)="handleNext()">next</button>
+    </ul>
+</div>
