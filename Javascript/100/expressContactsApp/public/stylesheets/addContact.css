@@ -1,0 +1,15 @@
+label{
+    width: 40px;
+    display: inline-block;
+}
+
+
+#addContactForm .formGroup{
+    margin-bottom: 4px;
+
+}
+
+.buttons {
+    text-align: center;
+}
+

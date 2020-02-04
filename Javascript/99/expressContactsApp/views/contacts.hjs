@@ -1,0 +1,6 @@
+{{#contacts}}
+    <h1>{{firstName}} {{lastName}}</h1>
+    <h4>{{email}}</h4>
+    <h3>{{phone}}</h3>
+    <hr>
+{{/contacts}}
