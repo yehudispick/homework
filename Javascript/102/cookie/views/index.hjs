@@ -1,0 +1,2 @@
+<p>Hello {{ name }}, Welcome to {{ title }}</p>
+<a href="/{{stateOfUser}}">{{stateOfUser}}</a>

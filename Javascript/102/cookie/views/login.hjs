@@ -1,0 +1,6 @@
+<form method="POST">
+    <label for="name">
+        <input type="text" name="name">
+    </label>
+    <button>submit</button>
+</form>
