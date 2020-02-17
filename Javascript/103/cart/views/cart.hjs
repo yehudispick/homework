@@ -1,0 +1,23 @@
+<a class="btn btn-primary" href="/" role="button">Continue Shopping</a>
+<hr/>
+ 
+<div class="card-deck mb-3 text-center">
+  {{#items}}
+  <div class="card mb-4 shadow-sm">
+      
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">{{cartItem.name}}</h4>
+    </div>
+    <div class="card-body item">
+      <img class="img-fluid" src="{{cartItem.img}}" alt={{cartItem.name}} />
+      <ul class="list-unstyled mt-3 mb-4">
+        <li>{{cartItem.description}}</li>
+        <li>Price: {{cartItem.price}}</li>
+        <li>quantity: {{quantity}}</li>
+        <li>subtotal: {{subtotal}}</li>
+      </ul>
+    </div>
+  </div>
+  {{/items}}
+</div>
+<div class="card-header text-center my-1 px-0 ">Your total comes to: {{total}}</div>
