@@ -1,0 +1,10 @@
+{{> posts}}
+<div id="button">
+    <button id="loadMore">Load More</button>
+</div>
+
+<div id="addComment">
+    <textarea  id="comment_content"></textarea>
+    <button id="cancel">cancel</button>
+    <button id="add">add comment</button>
+</div>

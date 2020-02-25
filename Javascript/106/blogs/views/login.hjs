@@ -1,0 +1,12 @@
+<form method="POST" action="/login" id="form">
+
+    <label>Name:
+      <input name="user">
+    </label>
+    <label>Password: 
+       <input type="password" name="password" >
+    </label>
+    <div>
+        <button>login</button>
+    </div>
+</form>

@@ -1,0 +1,10 @@
+
+<form method="POST" action="/register">
+  <label>Name:
+    <input name="user">
+  </label>
+  <label>Password: 
+      <input type="password" name="password" >
+  </label>
+  <button>register</button>
+</form>
