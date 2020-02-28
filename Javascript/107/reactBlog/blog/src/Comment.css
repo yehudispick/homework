@@ -1,0 +1,13 @@
+.comments{
+    border: 1px solid;
+    font-size: .8em;
+
+}
+
+.comments h3, .comments h4{
+    margin: 0;  
+}
+
+.comments h3{
+    color: blue;
+}
