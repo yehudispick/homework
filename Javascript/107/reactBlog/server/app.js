@@ -47,6 +47,15 @@ app.use(require('cors')({
     next()
 })*/
 
+const mustBeLoggedIn = (req, res, next) => {
+    if (req.session.user){
+      next();
+    }else{
+        return next(new Error('You must log in'));
+    }
+  }
+
+
 app.route('/posts')
     .get( async(req, res, next)=>{
 
@@ -68,7 +77,7 @@ app.route('/posts')
         }   
     })
 
-    .post( async (req, res, next) => {
+    .post([mustBeLoggedIn], async (req, res, next) => {
         const newPost = {
         title: req.body.title,
         content: req.body.content,
@@ -86,17 +95,13 @@ app.route('/posts')
 
 
 app.route('/register')
-    .get((req, res, next) => {
-        res.render('layout', { title: 'Express' , partials:{content: 'register'}});
-    })
+    
     .post(async(req, res, next) => {
         if(!req.body.user || !req.body.password){
-            req.session.errorPage = 'register'
             return next('User and password are required');
         }
         bcrypt.hash(req.body.password, 10, async(error, hash) =>{
             if(error) {
-                req.session.errorPage = 'register'
                 return next(error);
             }
 
@@ -106,44 +111,32 @@ app.route('/register')
             };
             try {
               await users.insertOne(newUser);
-              res.redirect('/');
+              res.status(201).send("success");
+              //res.redirect('/');
             } catch (e) {
-                req.session.errorPage = 'register'
+                
               return next(e);
             }
         });
     });
 app.route('/login')
-    .get((req, res, next) => {
-        res.render('layout', {
-            subtitle: 'Login',
-            links: [{url:'/register', text: "register"}],
-            css: ['login'],
-            partials:{
-                content: 'login',
-            }
-        });
-    })
+    
     .post(async (req, res, next) => {
         try {
             const user = await users.findOne({username: req.body.user}, {password: 1})
             
             if(!user.password){
-                req.session.errorPage = 'login'
                 return next(new Error('Invalid username and password'))
             }
-            const match = bcrypt.compare(req.body.password, user.password);// (error, results) => {
-                
+            const match = bcrypt.compare(req.body.password, user.password);               
                 if(!match){
-                    
-                    req.session.errorPage = 'login'
                     return next(new Error('Invalid username and password'))
                 } 
                 req.session.user = req.body.user;
-                res.redirect('/')
+                res.status(200).send("success");
+                //res.redirect('/')
             
         } catch (error) {
-            req.session.errorPage = 'login'
             return next(error);
         }
     });
@@ -152,19 +145,10 @@ app.get('/logout', (req, res, next) => {
   req.session.destroy();
   res.redirect('/')
 })
-/*
-app.use((req, res, next) => {
-    if (req.session.user){
-      next();
-    }else{
-        
-        req.session.errorPage = 'login'
-        return next(new Error('You must log in'));
-    }
-  })
-*/
 
-app.post('/posts/:id/comments', async(req, res, next)=>{    
+
+
+app.post('/posts/:id/comments', [mustBeLoggedIn],async(req, res, next)=>{    
     const newComment ={
         content: req.body.content,
         author: req.session.user,
